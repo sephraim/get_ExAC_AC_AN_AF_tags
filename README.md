@@ -35,7 +35,7 @@ The INFO column will only contain the following tags:
 
 ## Usage
 
-First, you will need to download the original VCF file from the ExAC server [here](ftp://ftp.broadinstitute.org/pub/ExAC_release). Then run the script on the file. See the example below on how to run the script.
+First, you will need to download the original VCF file from the ExAC server [here](http://exac.broadinstitute.org/downloads). Then run the script on the file. See the example below on how to run the script.
 
 ### Example
 
