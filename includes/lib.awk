@@ -17,17 +17,16 @@ function print_header(file) {
 # Compute the AF for an ExAC variant based on AC/AN.
 #
 # Example variant:
-# 22 24199764 rs66928071 AC ACC,ACCCC,ACCC,A ... AC_AFR=792,151,754,865,4244;...
-# Example input (e.g. AC_AFR, AN_AFR):
-#   "792,151,754,865"
-#   "6806"
-# Example output (i.e. AC, AN, AF):
-#   ["792,151,754,865", "6806", "0.116368,0.0221863,0.110785,0.127094"]
+# 22 24199764 . AC A,ACCC,ACC,CC,ACCCC,ACCCCC ... AC_AFR=97,282,829,1,16,0;...AN_AFR=2466;...
+# Example input (e.g. AC_AFR, AN_AFR, output array name):
+#   get_ac_an_af("97,282,829,1,16,0", "2466", "afr_ac_an_af")
+# Example output (i.e. array[AC, AN, AF]):
+#   afr_ac_an_af["97,282,829,1,16,0", "2466", "0.039334955,0.114355231,0.336171938,0.000405515,0.00648824,0"]
 #
 # @author Sean Ephraim
 # @param ac  Original string containing alternate allele counts (comma-separated)
 # @param an  Original string containing total allele counts
-# @param ac_an_af Array to store the final AC, AN, and AF values
+# @param ac_an_af  Array to store the final AC, AN, and AF values
 function get_ac_an_af(ac, an, ac_an_af) {
   len_ac_array = split(ac, ac_array, ",")
   # Calculate AF
