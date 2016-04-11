@@ -8,9 +8,9 @@ The point of this script is to provide a file that's easy to implement for annot
 
 The INFO column will only contain the following tags:
 
-- **ExAC\_ALL\_AC** - Total number of alternate alleles in called genotypes
-- **ExAC\_ALL\_AN** - Total number of alleles in called genotypes
-- **ExAC\_ALL\_AF** - Allele frequency in the all populations calculated from AC and AN, in the range (0,1)
+- **ExAC\_ALL\_AC** - Adjusted total number of alternate alleles in called genotypes
+- **ExAC\_ALL\_AN** - Adjusted total number of alleles in called genotypes
+- **ExAC\_ALL\_AF** - Adjusted allele frequency in the all populations calculated from AC and AN, in the range (0,1)
 - **ExAC\_AFR\_AC** - African/African American alternate allele counts
 - **ExAC\_AFR\_AN** - African/African American allele counts
 - **ExAC\_AFR\_AF** - Allele frequency in the African/African American populations calculated from AC and AN, in the range (0,1)

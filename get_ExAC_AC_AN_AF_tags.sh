@@ -17,9 +17,9 @@
 
 echo "Creating new ExAC file..."
 bcftools query \
-  -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%QUAL\t%FILTER\t%INFO/AC\t%INFO/AN\t%INFO/AC_AFR\t%INFO/AN_AFR\t%INFO/AC_AMR\t%INFO/AN_AMR\t%INFO/AC_EAS\t%INFO/AN_EAS\t%INFO/AC_FIN\t%INFO/AN_FIN\t%INFO/AC_NFE\t%INFO/AN_NFE\t%INFO/AC_OTH\t%INFO/AN_OTH\t%INFO/AC_SAS\t%INFO/AN_SAS\n' \
+  -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%QUAL\t%FILTER\t%INFO/AC_Adj\t%INFO/AN_Adj\t%INFO/AC_AFR\t%INFO/AN_AFR\t%INFO/AC_AMR\t%INFO/AN_AMR\t%INFO/AC_EAS\t%INFO/AN_EAS\t%INFO/AC_FIN\t%INFO/AN_FIN\t%INFO/AC_NFE\t%INFO/AN_NFE\t%INFO/AC_OTH\t%INFO/AN_OTH\t%INFO/AC_SAS\t%INFO/AN_SAS\n' \
   $1 \
-  | awk -f .includes/lib.awk -f .includes/print_new_vcf.awk \
+  | awk -f includes/lib.awk -f includes/print_new_vcf.awk \
   | bcftools convert -O z -o $2
 echo "Done! Output written to $2"
 

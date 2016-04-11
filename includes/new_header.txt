@@ -23,30 +23,30 @@
 ##GATKCommandLine=<ID=VariantAnnotator,Version=3.2-2-gec30cee,Date="Mon Nov 24 21:39:16 EST 2014",Epoch=1416883156611,CommandLineOptions="analysis_type=VariantAnnotator input_file=[] showFullBamList=false read_buffer_size=null phone_home=AWS gatk_key=null tag=NA read_filter=[] intervals=[X:1-7763528] excludeIntervals=null interval_set_rule=UNION interval_merging=ALL interval_padding=0 reference_sequence=/seq/references/Homo_sapiens_assembly19/v1/Homo_sapiens_assembly19.fasta nonDeterministicRandomSeed=false disableDithering=false maxRuntime=-1 maxRuntimeUnits=MINUTES downsampling_type=BY_SAMPLE downsample_to_fraction=null downsample_to_coverage=250 baq=OFF baqGapOpenPenalty=40.0 refactor_NDN_cigar_string=false fix_misencoded_quality_scores=false allow_potentially_misencoded_quality_scores=false useOriginalQualities=false defaultBaseQualities=-1 performanceLog=null BQSR=null quantize_quals=0 disable_indel_quals=false emit_original_quals=false preserve_qscores_less_than=6 globalQScorePrior=-1.0 validation_strictness=SILENT remove_program_records=false keep_program_records=false sample_rename_mapping_file=null unsafe=null disable_auto_index_creation_and_locking_when_reading_rods=false num_threads=1 num_cpu_threads_per_data_thread=1 num_io_threads=0 monitorThreadEfficiency=false num_bam_file_handles=null read_group_black_list=null pedigree=[] pedigreeString=[] pedigreeValidationType=STRICT allow_intervals_with_unindexed_bam=false generateShadowBCF=false variant_index_type=DYNAMIC_SEEK variant_index_parameter=-1 logging_level=INFO log_to_file=null help=false version=false variant=(RodBinding name=variant source=../filtered/ExAC_HC.chrX.00.filtered.vcf.gz) snpEffFile=(RodBinding name= source=UNBOUND) dbsnp=(RodBinding name= source=UNBOUND) comp=[] resource=[] out=org.broadinstitute.gatk.engine.io.stubs.VariantContextWriterStub no_cmdline_in_header=org.broadinstitute.gatk.engine.io.stubs.VariantContextWriterStub sites_only=org.broadinstitute.gatk.engine.io.stubs.VariantContextWriterStub bcf=org.broadinstitute.gatk.engine.io.stubs.VariantContextWriterStub annotation=[SexAlleleCounts] excludeAnnotation=[] group=[] expression={} useAllAnnotations=false list=false alwaysAppendDbsnpId=false MendelViolationGenotypeQualityThreshold=0.0 sampleMappingFile=samples_pop_sex.tsv filter_reads_with_N_cigar=false filter_mismatching_base_and_quals=false filter_bases_not_stored=false">
 ##GATKCommandLine=<ID=VariantFiltration,Version=3.2-2-gec30cee,Date="Sun Nov 23 08:50:16 EST 2014",Epoch=1416750616237,CommandLineOptions="analysis_type=VariantFiltration input_file=[] showFullBamList=false read_buffer_size=null phone_home=AWS gatk_key=null tag=NA read_filter=[] intervals=[X:1-7763528] excludeIntervals=null interval_set_rule=UNION interval_merging=ALL interval_padding=0 reference_sequence=/seq/references/Homo_sapiens_assembly19/v1/Homo_sapiens_assembly19.fasta nonDeterministicRandomSeed=false disableDithering=false maxRuntime=-1 maxRuntimeUnits=MINUTES downsampling_type=BY_SAMPLE downsample_to_fraction=null downsample_to_coverage=1000 baq=OFF baqGapOpenPenalty=40.0 refactor_NDN_cigar_string=false fix_misencoded_quality_scores=false allow_potentially_misencoded_quality_scores=false useOriginalQualities=false defaultBaseQualities=-1 performanceLog=null BQSR=null quantize_quals=0 disable_indel_quals=false emit_original_quals=false preserve_qscores_less_than=6 globalQScorePrior=-1.0 validation_strictness=SILENT remove_program_records=false keep_program_records=false sample_rename_mapping_file=null unsafe=null disable_auto_index_creation_and_locking_when_reading_rods=false num_threads=1 num_cpu_threads_per_data_thread=1 num_io_threads=0 monitorThreadEfficiency=false num_bam_file_handles=null read_group_black_list=null pedigree=[] pedigreeString=[] pedigreeValidationType=STRICT allow_intervals_with_unindexed_bam=false generateShadowBCF=false variant_index_type=DYNAMIC_SEEK variant_index_parameter=-1 logging_level=INFO log_to_file=null help=false version=false variant=(RodBinding name=variant source=../fullset/ExAC_HC.chrX.00.vcf.gz) mask=(RodBinding name= source=UNBOUND) out=org.broadinstitute.gatk.engine.io.stubs.VariantContextWriterStub no_cmdline_in_header=org.broadinstitute.gatk.engine.io.stubs.VariantContextWriterStub sites_only=org.broadinstitute.gatk.engine.io.stubs.VariantContextWriterStub bcf=org.broadinstitute.gatk.engine.io.stubs.VariantContextWriterStub filterExpression=[VQSLOD > -2.632 && InbreedingCoeff >-0.8, InbreedingCoeff <= -0.8] filterName=[NewCut_Filter, InbreedingCoeff_Filter] genotypeFilterExpression=[] genotypeFilterName=[] clusterSize=3 clusterWindowSize=0 maskExtension=0 maskName=Mask filterNotInMask=false missingValuesInExpressionsShouldEvaluateAsFailing=false invalidatePreviousFilters=false filter_reads_with_N_cigar=false filter_mismatching_base_and_quals=false filter_bases_not_stored=false">
 ##GVCFBlock=minGQ=0(inclusive),maxGQ=5(exclusive)
-##INFO=<ID=ExAC_ALL_AC,Number=A,Type=Integer,Description="Total number of alternate alleles in called genotypes">
-##INFO=<ID=ExAC_ALL_AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
-##INFO=<ID=ExAC_ALL_AF,Number=A,Type=Float,Description="Allele frequency in the all populations calculated from AC and AN, in the range (0,1)">
-##INFO=<ID=ExAC_AFR_AC,Number=A,Type=Integer,Description="African/African American alternate allele counts">
-##INFO=<ID=ExAC_AFR_AN,Number=1,Type=Integer,Description="African/African American allele counts">
-##INFO=<ID=ExAC_AFR_AF,Number=A,Type=Float,Description="Allele frequency in the African/African American populations calculated from AC and AN, in the range (0,1)">
-##INFO=<ID=ExAC_AMR_AC,Number=A,Type=Integer,Description="American alternate allele counts">
-##INFO=<ID=ExAC_AMR_AN,Number=1,Type=Integer,Description="American allele counts">
-##INFO=<ID=ExAC_AMR_AF,Number=A,Type=Float,Description="Allele frequency in the American populations calculated from AC and AN, in the range (0,1)">
-##INFO=<ID=ExAC_EAS_AC,Number=A,Type=Integer,Description="East Asian alternate allele counts">
-##INFO=<ID=ExAC_EAS_AN,Number=1,Type=Integer,Description="East Asian allele counts">
-##INFO=<ID=ExAC_EAS_AF,Number=A,Type=Float,Description="Allele frequency in the East Asian populations calculated from AC and AN, in the range (0,1)">
-##INFO=<ID=ExAC_FIN_AC,Number=A,Type=Integer,Description="Finnish alternate allele counts">
-##INFO=<ID=ExAC_FIN_AN,Number=1,Type=Integer,Description="Finnish allele counts">
-##INFO=<ID=ExAC_FIN_AF,Number=A,Type=Float,Description="Allele frequency in the Finnish populations calculated from AC and AN, in the range (0,1)">
-##INFO=<ID=ExAC_NFE_AC,Number=A,Type=Integer,Description="Non-Finnish European alternate allele counts">
-##INFO=<ID=ExAC_NFE_AN,Number=1,Type=Integer,Description="Non-Finnish European allele counts">
-##INFO=<ID=ExAC_NFE_AF,Number=A,Type=Float,Description="Allele frequency in the Non-Finnish populations calculated from AC and AN, in the range (0,1)">
-##INFO=<ID=ExAC_OTH_AC,Number=A,Type=Integer,Description="Other alternate allele counts">
-##INFO=<ID=ExAC_OTH_AN,Number=1,Type=Integer,Description="Other allele counts">
-##INFO=<ID=ExAC_OTH_AF,Number=A,Type=Float,Description="Allele frequency in the Other populations calculated from AC and AN, in the range (0,1)">
-##INFO=<ID=ExAC_SAS_AC,Number=A,Type=Integer,Description="South Asian alternate allele counts">
-##INFO=<ID=ExAC_SAS_AN,Number=1,Type=Integer,Description="South Asian allele counts">
-##INFO=<ID=ExAC_SAS_AF,Number=A,Type=Float,Description="Allele frequency in the South Asian populations calculated from AC and AN, in the range (0,1)">
+##INFO=<ID=EXAC_ALL_AC,Number=A,Type=Integer,Description="Adjusted total number of alternate alleles in called genotypes (referred to as AC_Adj in the original VCF)">
+##INFO=<ID=EXAC_ALL_AN,Number=1,Type=Integer,Description="Adjusted total number of alleles in called genotypes (referred to as AN_Adj in the original VCF)">
+##INFO=<ID=EXAC_ALL_AF,Number=A,Type=Float,Description="Adjusted allele frequency in the all populations calculated from AC_Adj and AN_Adj, in the range (0,1) (referred to as AF_Adj in the original VCF)">
+##INFO=<ID=EXAC_AFR_AC,Number=A,Type=Integer,Description="African/African American alternate allele counts">
+##INFO=<ID=EXAC_AFR_AN,Number=1,Type=Integer,Description="African/African American allele counts">
+##INFO=<ID=EXAC_AFR_AF,Number=A,Type=Float,Description="Allele frequency in the African/African American populations calculated from AC and AN, in the range (0,1)">
+##INFO=<ID=EXAC_AMR_AC,Number=A,Type=Integer,Description="American alternate allele counts">
+##INFO=<ID=EXAC_AMR_AN,Number=1,Type=Integer,Description="American allele counts">
+##INFO=<ID=EXAC_AMR_AF,Number=A,Type=Float,Description="Allele frequency in the American populations calculated from AC and AN, in the range (0,1)">
+##INFO=<ID=EXAC_EAS_AC,Number=A,Type=Integer,Description="East Asian alternate allele counts">
+##INFO=<ID=EXAC_EAS_AN,Number=1,Type=Integer,Description="East Asian allele counts">
+##INFO=<ID=EXAC_EAS_AF,Number=A,Type=Float,Description="Allele frequency in the East Asian populations calculated from AC and AN, in the range (0,1)">
+##INFO=<ID=EXAC_FIN_AC,Number=A,Type=Integer,Description="Finnish alternate allele counts">
+##INFO=<ID=EXAC_FIN_AN,Number=1,Type=Integer,Description="Finnish allele counts">
+##INFO=<ID=EXAC_FIN_AF,Number=A,Type=Float,Description="Allele frequency in the Finnish populations calculated from AC and AN, in the range (0,1)">
+##INFO=<ID=EXAC_NFE_AC,Number=A,Type=Integer,Description="Non-Finnish European alternate allele counts">
+##INFO=<ID=EXAC_NFE_AN,Number=1,Type=Integer,Description="Non-Finnish European allele counts">
+##INFO=<ID=EXAC_NFE_AF,Number=A,Type=Float,Description="Allele frequency in the Non-Finnish populations calculated from AC and AN, in the range (0,1)">
+##INFO=<ID=EXAC_OTH_AC,Number=A,Type=Integer,Description="Other alternate allele counts">
+##INFO=<ID=EXAC_OTH_AN,Number=1,Type=Integer,Description="Other allele counts">
+##INFO=<ID=EXAC_OTH_AF,Number=A,Type=Float,Description="Allele frequency in the Other populations calculated from AC and AN, in the range (0,1)">
+##INFO=<ID=EXAC_SAS_AC,Number=A,Type=Integer,Description="South Asian alternate allele counts">
+##INFO=<ID=EXAC_SAS_AN,Number=1,Type=Integer,Description="South Asian allele counts">
+##INFO=<ID=EXAC_SAS_AF,Number=A,Type=Float,Description="Allele frequency in the South Asian populations calculated from AC and AN, in the range (0,1)">
 ##contig=<ID=1,length=249250621>
 ##contig=<ID=2,length=243199373>
 ##contig=<ID=3,length=198022430>
